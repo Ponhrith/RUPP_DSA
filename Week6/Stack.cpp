@@ -25,6 +25,7 @@ int main(){
     food.push_back("Chicken");
     food.pop_back();
     // food.size();
+    std::cout << food.size() << "\n";
 
 
     cafeteriaTrays vect(food);
