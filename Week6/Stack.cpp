@@ -25,7 +25,7 @@ int main(){
     food.push_back("Chicken");
     food.pop_back();
     // food.size();
-    std::cout << food.size() << "\n";
+    std::cout<< "The size of this vector is:"<< " " << food.size() << "\n";
 
 
     cafeteriaTrays vect(food);
