@@ -29,12 +29,10 @@ int main(){
     int arr_size = sizeof(my_arr)/sizeof(my_arr[0]);
     cout<<"The current element in my array is: ";
     display_array(my_arr, arr_size);
-
     int newEle = 10;
     int pos = 3;
     insert_data(my_arr, newEle, pos);
-
-    cout<<"The current element after add"<< newEle <<"to position"<< pos <<" :";
+    cout<<"The current element after add"<< newEle <<"to position"<<pos <<" :";
     display_array(my_arr, arr_size);
     cout<<endl;
     return 0;
