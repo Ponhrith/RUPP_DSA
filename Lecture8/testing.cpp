@@ -139,8 +139,8 @@ int main() {
 
     int opt;
     while (opt != 6) {
-        cout << "Welcome to Patients Management System: \n1. Add patients to Queue\n2. Change the Queue's status\n3. Display the Token\n4. Display the Queue\n5. Clear the Queue\n6. Quit\n";
-        cout << "--->";
+        cout << "Welcome to Patients Management System: \n1. Add patients to queue system\n2. Change the patients' status\n3. Display the patients' status\n4. Display the patients in the queue\n5. Clear the queue\n6. Quit the system\n";
+        //cout << "--->";
         cin >> opt;
 
         switch (opt) {
