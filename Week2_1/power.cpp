@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+
 int recursepower(int a, int n)
 {
     if (n == 0) {
