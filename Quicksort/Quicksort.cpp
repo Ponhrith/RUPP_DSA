@@ -40,10 +40,9 @@ int main(){
     int pivot = arr[last_index];
     quickSort(arr, first_index, last_index);
 
-    // Print sorted array
+
     for(int i = 0; i <= last_index; i++){
         cout << arr[i] << " ";
-    }
-    
+    }    
     return 0;
 }
