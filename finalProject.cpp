@@ -30,32 +30,49 @@ public:
 };
 
 int main() {
-    int shift;
-    string message;
+    int choice;
+    do {
+        int shift;
+        string message;
 
-    cout << "Encryption and Decryption Program" << endl;
-    cout << "--------------------------------" << endl;
+        cout << "Encryption and Decryption Program" << endl;
+        cout << "--------------------------------" << endl;
 
-    // Input
-    cout << "Enter a message: ";
-    getline(cin, message);
+        // User choice
+        cout << "Click (1) to decrypt, (2) to encrypt: ";
+        cin >> choice;
+        cin.ignore(); // Clear the newline character
 
-    cout << "Enter a shift value (1-25): ";
-    cin >> shift;
+        // Input
+        cout << "Enter a message: ";
+        getline(cin, message);
 
-    // Ensure the shift value is within the valid range
-    shift = max(1, min(25, shift));
+        cout << "Enter a shift value (1-25): ";
+        cin >> shift;
 
-    // Create the CaesarCipher instance
-    CaesarCipher cipher(shift);
+        // Ensure the shift value is within the valid range
+        shift = max(1, min(25, shift));
 
-    // Encryption
-    string encryptedMessage = cipher.encrypt(message);
-    cout << "Encrypted Message: a%b1345sed" << encryptedMessage <<"hse3%q233ksndahsehbs"<< endl;
+        // Create the CaesarCipher instance
+        CaesarCipher cipher(shift);
 
-    // Decryption
-    string decryptedMessage = cipher.decrypt(encryptedMessage);
-    cout << "Decrypted Message: " << decryptedMessage << endl;
+        if (choice == 1) {
+            // Decryption
+            string decryptedMessage = cipher.decrypt(message);
+            cout << "Decrypted Message: " << decryptedMessage << endl;
+        } else if (choice == 2) {
+            // Encryption
+            string encryptedMessage = cipher.encrypt(message);
+            cout << "Encrypted Message: " << encryptedMessage << endl;
+        } else {
+            cout << "Invalid choice. Please choose (1) for decryption or (2) for encryption." << endl;
+        }
+
+        // Prompt user to restart
+        cout << "Do you want to start again? (1 for Yes, 0 for No): ";
+        cin >> choice;
+
+    } while (choice == 1);
 
     return 0;
 }
